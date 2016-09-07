@@ -1,0 +1,128 @@
+body{
+
+	margin: 0;
+	padding: 0;
+	min-height: 100%;
+	width: 100%;
+	background: #f1f1f1;
+}
+.artificia-navbar{
+
+	width: 100%;
+    height: 80px;
+    padding: 10px;
+    position: fixed;
+    z-index: 4;
+    background: rgba(0,0,0,0.8);
+}
+.artificia-navbar a{
+
+	display: block;
+    float: left;
+    margin-left: 20px;
+    color: #fff;
+    margin-top: 10px;
+    border-radius: 4px;
+    padding: 10px 10px;
+    background: #009688;
+    font-size: 16px;
+}
+.artificia-navbar img{
+
+	height: 60px;
+}
+.create-content{
+
+	float: none !important;
+    margin-top: 2% !important;
+    margin: 0 auto;
+}
+.product:hover .product-content{
+
+	height:100px;
+	max-height: 100px;
+	padding: 10px;
+}
+.product{
+
+	width: 200px;
+    position: relative;
+    margin: 10px;
+    padding: 10px;
+    background: #fff;
+    overflow: hidden;
+    display: inline-block;
+}
+.category-text{
+
+	line-height: 40px;
+    /* vertical-align: middle; */
+    float: left;
+    font-size: 20px;
+    color: rgba(255,255,255,1);
+}
+.artifacia-cat{
+
+	position: fixed;
+    z-index: 4;
+    margin-top: 80px;
+}
+.category-icon i{
+
+	line-height: 40px;
+    font-size: 35px;
+    color: rgba(255,255,255,1);
+}
+.category-icon{
+
+	float: right;
+}
+.category-item a{
+
+	display: block;
+    height: 100%;
+}
+.category-item:hover, .category-item.active{
+
+	margin-left: 0px;
+}
+.category-item{
+
+	height: 60px;
+    color: #fff;
+    background: #000;
+    padding: 10px;
+    position: relative;
+    z-index: 1001;
+    margin: 5px;
+    width: 150px;
+    transition: margin 0.5s ease;
+    -webkit-transition: margin 0.5s ease;
+    -moz-transition: margin 0.5s ease;
+    margin-left: -95px;
+}
+.product-name, .product-amount{
+
+	text-align: left;
+	font-size: 15px;
+	color: #fff;
+	margin-bottom: 5px;
+}
+.product-content{
+
+	bottom: 0;
+    position: absolute;
+    height: 0px;
+    padding: 0px;
+    width: 90%;
+    background: rgba(0,0,0,0.3);
+    transition: height 0.5s ease;
+    -webkit-transition: height 0.5s ease;
+    -moz-transition: height 0.5s ease;
+}
+.products-container{
+
+	padding:2rem 1rem;
+	margin-top: 80px;
+	text-align: center;
+}

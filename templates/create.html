@@ -1,0 +1,43 @@
+<div class="row">
+	<div class="col-md-8 col-lg-6 col-sm-10 create-content">
+		<div ng-if="showError" class="login-error">Please fill in all the details</div>
+		<form name="createForm" ng-submit="create()">
+			<div class="panel panel-info">
+		  		<div class="panel-heading">Product Details</div>
+		  		<div class="panel-body">
+		  			<div class="form-group">
+		    			<input class="form-control ng-pristine ng-invalid ng-invalid-required" ng-model="name" name="name" type="text" placeholder="name" required="">
+		  			</div>
+		  			<div class="form-group">
+		    			<input class="form-control ng-pristine ng-invalid ng-invalid-required" ng-model="id" name="id" type="text" placeholder="product id" required="">
+		  			</div>
+		  			<div class="form-group">
+		    			<input class="form-control ng-pristine ng-invalid ng-invalid-required" ng-model="price" name="price" type="number" placeholder="price" required="">
+		  			</div>
+		  		</div>
+			</div>
+		 	<div class="panel panel-info">
+		  		<div class="panel-heading">Category Details</div>
+		  		<div class="panel-body">
+		  			<div class="form-group">
+		    			<input class="form-control ng-pristine ng-invalid ng-invalid-required" ng-model="imageurl" name="imageurl" type="text" placeholder="product image url" required="">
+		  			</div>
+		  			<select class="form-control ng-pristine ng-invalid ng-invalid-required" name="category" ng-model="category" required="">
+						<option value="">- Select  category -</option>
+						<option ng-repeat="category in categories" data-ticketId = "{{category.id}}">{{category.title}}</option>
+					</select>
+		  		</div>
+			</div>
+			<div class="panel panel-info">
+		  		<div class="panel-heading">Description</div>
+		  		<div class="panel-body">
+		  			<div class="form-group">
+		    			<textarea class="form-control ng-pristine ng-invalid ng-invalid-required" ng-model="description" name="description" type="text" placeholder="Enter Description" required="">
+		  				</textarea>
+		  			</div>
+		  		</div>
+			</div>
+			<button type="submit" class="btn create-btn">CREATE PRODUCT</button>
+		</form>
+	</div>
+</div>

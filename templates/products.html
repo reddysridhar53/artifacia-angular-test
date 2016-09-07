@@ -1,0 +1,16 @@
+<div class="products-container" ng-init="getProducts()">
+  <div class="loader" ng-if="showLoader">
+    <img src="/artificia-angular-test/images/733.gif">
+  </div>
+  <div class="product" ng-repeat="product in products">
+    <div class="product-inner">
+      <div class="product-img">
+        <img src="{{product.imageurl}}" />
+      </div>
+      <div class="product-content">
+        <div class="product-name">{{product.name}}</div>
+        <div class="product-amount">Rs.{{product.price}}</div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+	<title>Artificia Products -  AngularJS</title>
+		
+		<script src="modules/angular.js"></script>
+		<script src="modules/angular-resource.js"></script>
+		<script src="modules/angular-route.js"></script>
+		<script src="modules/angular-sanitize.js"></script>
+
+		<!-- Firebase -->
+		<script src="https://cdn.firebase.com/js/client/2.4.2/firebase.js"></script>
+		
+		<script src="https://cdn.firebase.com/libs/angularfire/0.8.0/angularfire.min.js"></script>
+		
+		<script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+		
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+		
+		<script src="modules/bootstrap-tpls.js"></script>
+		<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+	
+		<script type='text/javascript' src="app.js"></script>
+
+		
+		<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+	<div class="container-fluid main-container" ng-app="artificiaCat">
+		<div class="row">
+			<div class="nav-bar artificia-navbar">
+				<img class="pull-left" src="http://artifacia.com/static/images/logo/logo.png">
+				<a href="#/create/product">Create Product</a>
+				<a href="#/products/All">View Products</a>
+			</div>
+			<div class="artifacia-cat" ng-controller="categoriesCtrl">
+				<div ng-class="navClass('products/{{cat.title}}')" class="category-item" ng-repeat="cat in categories" title="{{cat.title}}">
+					<a href="#/products/{{cat.title}}">
+						<span class="category-text">{{cat.title}}</span>
+						<span class="category-icon"><i class="glyphicon glyphicon-{{cat.icon}}"></i></span>
+					</a>	
+				</div>
+			</div>
+			<div ng-view>
+				
+			</div>
+		</div>	
+	</div>	
+
+</body>
+</html>
