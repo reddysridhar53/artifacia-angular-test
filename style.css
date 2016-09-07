@@ -34,7 +34,7 @@ body{
 .create-content{
 
 	float: none !important;
-    margin-top: 2% !important;
+    margin-top: 80px !important;
     margin: 0 auto;
 }
 .product:hover .product-content{
