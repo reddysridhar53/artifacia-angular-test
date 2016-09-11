@@ -53,6 +53,10 @@ body{
     overflow: hidden;
     display: inline-block;
 }
+.product img{
+	
+	width:100%;
+}
 .category-text{
 
 	line-height: 40px;
